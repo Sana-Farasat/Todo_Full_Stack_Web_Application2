@@ -3,7 +3,8 @@ import { createAuthClient } from "better-auth/react";
 import { jwtClient } from "better-auth/client/plugins";
 
 export const authClient = createAuthClient({
-  baseURL: "http://localhost:3000",
+  //baseURL: "http://localhost:3000",
+  baseURL: "https://todo-full-stack-web-application2.vercel.app",
   plugins: [jwtClient()],
 });
 
