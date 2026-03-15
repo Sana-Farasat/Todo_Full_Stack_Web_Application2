@@ -31,9 +31,9 @@ export default function useApi() {
   }
 
   return {
-    getTasks: (userId: string) => request("GET", `/api/${userId}/tasks`),
+    getTasks: (userId: string) => request("GET", `/api/${userId}/tasks/`),
     addTask: (userId: string, data: any) =>
-      request("POST", `/api/${userId}/tasks`, data),
+      request("POST", `/api/${userId}/tasks/`, data),
     updateTask: (userId: string, taskId: number, data: any) =>
       request("PUT", `/api/${userId}/tasks/${taskId}`, data),
     toggleComplete: (userId: string, taskId: number, completed: boolean) =>
